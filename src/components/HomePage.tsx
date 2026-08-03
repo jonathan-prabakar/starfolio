@@ -78,7 +78,7 @@ const sectionComponents: Record<string, React.ReactNode> = {
                   href={education.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-x-3 justify-between group rounded-lg transition-all duration-300 ease-out hover:bg-muted/40 hover:ring-1 hover:ring-primary/30 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-0.5 p-2 -m-2"
+                  className="flex flex-col sm:flex-row sm:items-center gap-x-3 gap-y-1 justify-between group rounded-lg transition-all duration-300 ease-out hover:bg-muted/40 hover:ring-1 hover:ring-primary/30 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-0.5 p-2 -m-2"
                 >
                   <div className="flex items-center gap-x-3 flex-1 min-w-0">
                     {education.logoUrl ? (
@@ -92,14 +92,14 @@ const sectionComponents: Record<string, React.ReactNode> = {
                     )}
                     <div className="flex-1 min-w-0 flex flex-col gap-0.5">
                       <div className="font-semibold leading-none flex items-center gap-2">
-                        {education.school}
-                        <ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" aria-hidden />
+                        <span className="truncate">{education.school}</span>
+                        <ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 shrink-0" aria-hidden />
                       </div>
                       <div className="font-sans text-sm text-muted-foreground">{education.degree}</div>
                     </div>
                   </div>
-                  <div className="flex items-center gap-1 text-xs tabular-nums text-muted-foreground text-right flex-none">
-                    <span>{education.start} - {education.end}</span>
+                  <div className="flex items-center gap-1 text-xs tabular-nums text-muted-foreground text-right flex-none pl-0 sm:pl-3">
+                    <span className="whitespace-nowrap">{education.start} - {education.end}</span>
                   </div>
                 </a>
               </BlurFade>

@@ -39,13 +39,13 @@ export default function WorkSection() {
           className="w-full border-b-0 grid gap-2 rounded-lg transition-all duration-300 ease-out hover:bg-muted/40 hover:ring-1 hover:ring-primary/30 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-0.5 p-2 -m-2"
         >
           <AccordionTrigger className="hover:no-underline p-0 cursor-pointer transition-colors rounded-none group [&>svg]:hidden">
-            <div className="flex items-center gap-x-3 justify-between w-full text-left">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-x-3 gap-y-1 justify-between w-full text-left">
               <div className="flex items-center gap-x-3 flex-1 min-w-0">
                 <LogoImage src={work.logoUrl} alt={work.company} />
                 <div className="flex-1 min-w-0 gap-0.5 flex flex-col">
                   <div className="font-semibold leading-none flex items-center gap-2">
-                    {work.company}
-                    <span className="relative inline-flex items-center w-3.5 h-3.5">
+                    <span className="truncate">{work.company}</span>
+                    <span className="relative inline-flex items-center w-3.5 h-3.5 shrink-0">
                       <ChevronRight
                         className={cn(
                           "absolute h-3.5 w-3.5 shrink-0 text-muted-foreground stroke-2 transition-all duration-300 ease-out",
@@ -68,14 +68,14 @@ export default function WorkSection() {
                   </div>
                 </div>
               </div>
-              <div className="flex items-center gap-1 text-xs tabular-nums text-muted-foreground text-right flex-none">
-                <span>
+              <div className="flex items-center gap-1 text-xs tabular-nums text-muted-foreground text-right flex-none pl-0 sm:pl-3">
+                <span className="whitespace-nowrap">
                   {work.start} - {work.end ?? DATA.sections.work.presentLabel}
                 </span>
               </div>
             </div>
           </AccordionTrigger>
-          <AccordionContent className="p-0 ml-13 text-xs sm:text-sm text-muted-foreground">
+          <AccordionContent className="p-0 ml-0 sm:ml-13 text-xs sm:text-sm text-muted-foreground">
             {work.description}
           </AccordionContent>
         </AccordionItem>

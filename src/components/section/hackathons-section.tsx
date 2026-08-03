@@ -36,7 +36,7 @@ export default function HackathonsSection() {
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.4, ease: "easeOut", delay: index * 0.06 }}
             >
-              <TimelineItem className="w-full flex items-start justify-between gap-10">
+              <TimelineItem className="w-full flex items-start justify-between gap-3 sm:gap-6">
                 <TimelineConnectItem className="flex items-start justify-center">
                   {hackathon.image ? (
                     <img
@@ -53,11 +53,11 @@ export default function HackathonsSection() {
                     <time className="text-xs text-muted-foreground">{hackathon.dates}</time>
                   )}
                   {hackathon.title && (
-                    <h3 className="font-semibold leading-none flex items-center gap-2">
-                      {hackathon.title}
+                    <h3 className="font-semibold leading-none flex flex-wrap items-center gap-2">
+                      <span>{hackathon.title}</span>
                       {isWinner && (
                         <span className="inline-flex items-center gap-1 rounded-full bg-amber-400 px-2 py-0.5 text-xs font-semibold text-amber-950">
-                          <Trophy className="h-3 w-3" /> {hackathon.win}
+                          <Trophy className="h-3 w-3 shrink-0" /> {hackathon.win}
                         </span>
                       )}
                     </h3>
