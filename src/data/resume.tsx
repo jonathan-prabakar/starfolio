@@ -19,9 +19,9 @@ export const DATA = {
   location: "San Antonio, TX",
   locationLink: "https://www.google.com/maps/place/san_antonio+tx",
   description:
-    "Innovative and persistent CS student, eager to learn and solve problems in a project-based environment.",
+    "Welcome to my Personal Portfolio! I'm an Innovative and persistent CS student, eager to learn and solve problems in a project-based environment.",
   summary:
-    "Current 2nd year undergraduate student majoring in Computer Science. As part of my education, I am a USAA Ascent Scholar, PatientRAG Research Assistant, UTS Bold career intern, and part of the Dean's list",
+    "Current 2nd year undergraduate student majoring in Computer Science. As part of my education, I am an USAA Ascent Scholar, PatientRAG Research Assistant, UTS Bold career intern, and Dean's List recipient. :)",
   avatarUrl: "/photos/jonathan-headshot.png",
   ogImage: "/photos/jonathan-headshot.png",
   sections: {
@@ -110,7 +110,7 @@ export const DATA = {
       href: "https://utsa.edu",
       degree: "Bachelor of Science, Computer Science + Statistics",
       logoUrl: "https://www.google.com/s2/favicons?domain=utsa.edu&sz=128",
-      start: "2024",
+      start: "2025",
       end: "2028",
     },
   ],
@@ -232,6 +232,7 @@ export const DATA = {
       location: "San Antonio, TX",
       description: "Built a Python backend using pandas for data processing and scikit-learn's Logistic Regression to train a binary classifier on historical lap time and race result data. We exposed the model through a Flask REST API with CORS support and connected it to a React frontend dashboard ",
       image: "https://avatar.vercel.sh/hackthenorth-2021?size=40",
+      win: undefined,
       links: [
         {
           title: "Source",
@@ -251,7 +252,7 @@ export const DATA = {
       location: "Austin, Texas",
       description: "Built Streamlit F1 dashboard, integrated AI commentary, optimized track simulation, and implemented predictive analytics for race outcomes.",
       image: "https://avatar.vercel.sh/dubhacks-2021?size=40",
-      win: "Best Sustainability Hack",
+      win: undefined,
       links: [
         {
           title: "Devpost",
@@ -264,8 +265,9 @@ export const DATA = {
       title: "HackRice 2025",
       dates: "September 2025",
       location: "Houston, TX",
-      description: "WINNER - Built a gamified financial literacy app for underbanked users with merit-based rewards and secure Face ID Verification.",
+      description: "Built a gamified financial literacy app for underbanked users with merit-based rewards and secure Face ID Verification.",
       image: "https://avatar.vercel.sh/stormhacks-2021?size=40",
+      win: "Winner - sponsored by Goldman Sachs",
       links: [
         {
           title: "Devpost",

@@ -36,7 +36,7 @@ export default function WorkSection() {
         <AccordionItem
           key={work.company}
           value={work.company}
-          className="w-full border-b-0 grid gap-2"
+          className="w-full border-b-0 grid gap-2 rounded-lg transition-all duration-300 ease-out hover:bg-muted/40 hover:ring-1 hover:ring-primary/30 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-0.5 p-2 -m-2"
         >
           <AccordionTrigger className="hover:no-underline p-0 cursor-pointer transition-colors rounded-none group [&>svg]:hidden">
             <div className="flex items-center gap-x-3 justify-between w-full text-left">

@@ -1,4 +1,4 @@
-import { AnimatePresence, motion, useInView, type Variants } from "motion/react";
+import { AnimatePresence, motion, useInView, useReducedMotion, type Variants } from "motion/react";
 import { useRef } from "react";
 
 interface BlurFadeProps {
@@ -27,15 +27,21 @@ const BlurFade = ({
   blur = "6px",
 }: BlurFadeProps) => {
   const ref = useRef(null);
+  const reduceMotion = useReducedMotion();
   const inViewResult = useInView(ref, {
     once: true,
     ...(inViewMargin ? { margin: inViewMargin as any } : {})
   });
   const isInView = !inView || inViewResult;
-  const defaultVariants: Variants = {
-    hidden: { y: -yOffset, opacity: 0, filter: `blur(${blur})` },
-    visible: { y: 0, opacity: 1, filter: `blur(0px)` },
-  };
+  const defaultVariants: Variants = reduceMotion
+    ? {
+        hidden: { opacity: 0 },
+        visible: { opacity: 1 },
+      }
+    : {
+        hidden: { y: -yOffset, opacity: 0, filter: `blur(${blur})` },
+        visible: { y: 0, opacity: 1, filter: `blur(0px)` },
+      };
   const combinedVariants = variant || defaultVariants;
   return (
     <AnimatePresence>
