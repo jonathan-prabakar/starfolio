@@ -19,9 +19,9 @@ export const DATA = {
   location: "San Antonio, TX",
   locationLink: "https://www.google.com/maps/place/san_antonio+tx",
   description:
-    "Welcome to my Personal Portfolio! I'm an Innovative and persistent CS student, eager to learn and solve problems in a project-based environment.",
+    "Welcome to my Personal Portfolio! I'm an innovative and persistent CS student, eager to learn and solve problems in a project-based environment.",
   summary:
-    "Current 2nd year undergraduate student majoring in Computer Science. As part of my education, I am an USAA Ascent Scholar, PatientRAG Research Assistant, UTS Bold career intern, and Dean's List recipient. :)",
+    "Current 2nd year undergraduate student majoring in Computer Science. As part of my education, I am an USAA Ascent Scholar, PatientRAG Research Assistant, UTS Bold Careers Intern, and Dean's List recipient. :)",
   avatarUrl: "/photos/jonathan-headshot.png",
   ogImage: "/photos/jonathan-headshot.png",
   sections: {
@@ -39,7 +39,7 @@ export const DATA = {
       order: 7, enabled: true,
       label: "Hackathons",
       heading: "I like building things",
-      text: "As a 2nd year student, I have attended 3+ hackathons and continuing to go to more. People from around the country would come together and build incredible things in 2-3 days. It was eye-opening to see the endless possibilities brought to life by a group of motivated and passionate individuals.",
+      text: "As a 2nd year student, I have attended 3+ hackathons and am continuing to go to more. People from around the country would come together and build incredible things in 2-3 days. It was eye-opening to see the endless possibilities brought to life by a group of motivated and passionate individuals.",
     },
     photos: {
       order: 6, enabled: false,
@@ -70,7 +70,7 @@ export const DATA = {
     { name: "Tailwind CSS", icon: TailwindCSS },
     { name: "React", icon: ReactLight },
     { name: "Next.js", icon: NextjsIconDark },
-    { name: "Typescript", icon: Typescript },
+    { name: "TypeScript", icon: Typescript },
     { name: "Node.js", icon: Nodejs },
     { name: "Postgres", icon: Postgresql },
     { name: "Docker", icon: Docker },
@@ -137,7 +137,7 @@ export const DATA = {
       start: "Nov 2025",
       end: undefined,
       description:
-        "Integrated RAG with Llama LLMs and clinical ICD-10 datasets to generate structured diagnostic queries for patients and physicians. Built a Streamlit frontend for intuitive interaction with RAG pipeline and LLMs",
+        "Integrated RAG with Llama LLMs and clinical ICD-10 datasets to generate structured diagnostic queries for patients and physicians. Built a Streamlit frontend for intuitive interaction with RAG pipeline and LLMs.",
     },
     {
       company: "ServiceNow",
@@ -156,12 +156,12 @@ export const DATA = {
       href: "https://datadoghq.com",
       badges: [],
       location: "San Antonio, TX",
-      title: "Python Programming Instructor(ages 8-10)",
+      title: "Python Programming Instructor (ages 8-10)",
       logoUrl: "/photos/images.jpeg",
       start: "June 2023",
       end: "Aug 2023",
       description:
-        "Tutored students in Python programming, applying coding to solve math problems, enhancing skills in algorithms, data structures, computational logic.",
+        "Tutored students in Python programming, applying coding to solve math problems, enhancing skills in algorithms, data structures, and computational logic.",
     },
     
   ],
@@ -199,7 +199,7 @@ export const DATA = {
       dates: "July 2026 - Present",
       active: true,
       description:
-        "IntelliTunes is a self-correcting music recommender agent. recommends the top *k* songs from a small catalog that best match auser's stated taste profile (favorite genre, mood, target energy, danceability, and acoustic preference). Each recommendation comes with a plain-language explanation of why it was picked. It also has an evaluation harness that runs the agent over taste profiles and a score summary as well as a CI check.",
+        "IntelliTunes is a self-correcting music recommender agent. It recommends the top *k* songs from a small catalog that best match a user's stated taste profile (favorite genre, mood, target energy, danceability, and acoustic preference). Each recommendation comes with a plain-language explanation of why it was picked. It also has an evaluation harness that runs the agent over taste profiles and a score summary as well as a CI check.",
       technologies: [
         "Next.js",
         "TypeScript",
@@ -230,7 +230,7 @@ export const DATA = {
       title: "CodeQuantum 2026",
       dates: "March 2026",
       location: "San Antonio, TX",
-      description: "Built a Python backend using pandas for data processing and scikit-learn's Logistic Regression to train a binary classifier on historical lap time and race result data. We exposed the model through a Flask REST API with CORS support and connected it to a React frontend dashboard ",
+      description: "Built a Python backend using pandas for data processing and scikit-learn's Logistic Regression to train a binary classifier on historical lap time and race result data. We exposed the model through a Flask REST API with CORS support and connected it to a React frontend dashboard.",
       image: "https://avatar.vercel.sh/hackthenorth-2021?size=40",
       win: undefined,
       links: [
