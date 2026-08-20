@@ -15,7 +15,7 @@ import { TailwindCSS } from "@/components/ui/svgs/tailwind";
 export const DATA = {
   name: "Jonathan Gladwin Prabakar - CS + Statistics student",
   initials: "JP",
-  url: "https://astrofolio.jonprabakar9.workers.dev/",
+  url: "https://astrofolio.jonprabakar9.workers.dev",
   location: "San Antonio, TX",
   locationLink: "https://www.google.com/maps/place/san_antonio+tx",
   description:
@@ -280,7 +280,7 @@ export const DATA = {
         {
           title: "Source",
           icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/alexmercer-dev/raftdb",
+          href: "https://github.com/jonathan-prabakar",
         },
         {
           title: "Devpost",

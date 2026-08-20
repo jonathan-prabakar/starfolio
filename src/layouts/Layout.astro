@@ -16,7 +16,7 @@ const {
   title,
   description = DATA.description,
   image,
-  canonicalURL = Astro.url.href,
+  canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
 } = Astro.props;
 
 const pageTitle = title
