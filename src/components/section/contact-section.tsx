@@ -44,3 +44,6 @@ export default function ContactSection() {
           Contact Me
         </a>
       </div>
+    </div>
+  );
+}
