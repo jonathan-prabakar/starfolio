@@ -11,9 +11,35 @@ import ProjectsSection from "@/components/section/projects-section";
 import WorkSection from "@/components/section/work-section";
 import ResumeSection from "@/components/section/resume-section";
 import { ArrowUpRight, Mail } from "lucide-react";
-import { motion, useReducedMotion } from "motion/react";
+import { motion, useReducedMotion, useScroll, useSpring } from "motion/react";
 
 const BLUR_FADE_DELAY = 0.04;
+
+function ScrollProgress() {
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, { stiffness: 120, damping: 30, mass: 0.3 });
+  return (
+    <motion.div
+      style={{ scaleX }}
+      className="fixed inset-x-0 top-0 z-50 h-0.5 origin-left bg-gradient-to-r from-primary via-primary/70 to-primary"
+    />
+  );
+}
+
+function SectionDots({ sections }: { sections: string[] }) {
+  return (
+    <nav className="pointer-events-none fixed right-4 top-1/2 z-40 hidden -translate-y-1/2 flex-col gap-3 lg:flex">
+      {sections.map((id) => (
+        <a
+          key={id}
+          href={`#${id}`}
+          aria-label={id}
+          className="pointer-events-auto size-2.5 rounded-full bg-muted-foreground/30 ring-1 ring-border transition-all duration-200 hover:scale-150 hover:bg-primary"
+        />
+      ))}
+    </nav>
+  );
+}
 
 function SectionReveal({ children }: { children: React.ReactNode }) {
   const reduceMotion = useReducedMotion();
@@ -176,6 +202,8 @@ export default function HomePage() {
 
   return (
     <main className="min-h-dvh flex flex-col gap-14 relative">
+      <ScrollProgress />
+      <SectionDots sections={["hero", ...orderedSections]} />
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 gap-y-6 flex flex-col md:flex-row justify-between">
@@ -193,7 +221,7 @@ export default function HomePage() {
               />
               <BlurFade delay={BLUR_FADE_DELAY * 2} className="mt-2">
                 <a
-                  href="mailto:jonathanprabakart@gmail.com"
+                  href="mailto:jonathanprabakar@gmail.com"
                   className="group inline-flex w-fit items-center gap-2 rounded-full border border-border bg-background px-4 py-2 text-sm font-medium text-foreground shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary hover:text-primary-foreground hover:shadow-md hover:ring-2 hover:ring-primary/30"
                 >
                   <Mail className="size-4" />
@@ -202,10 +230,16 @@ export default function HomePage() {
               </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2">
-              <Avatar className="size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-muted">
-                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
-                <AvatarFallback>{DATA.initials}</AvatarFallback>
-              </Avatar>
+              <div className="relative w-fit">
+                <div
+                  aria-hidden
+                  className="absolute -inset-4 -z-10 rounded-full bg-[conic-gradient(from_180deg,theme(colors.primary/25%),transparent,theme(colors.zinc.400/25%),transparent)] blur-2xl motion-safe:animate-pulse"
+                />
+                <Avatar className="size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-muted">
+                  <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
+                  <AvatarFallback>{DATA.initials}</AvatarFallback>
+                </Avatar>
+              </div>
             </BlurFade>
           </div>
         </div>

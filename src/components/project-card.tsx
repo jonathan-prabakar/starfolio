@@ -50,10 +50,25 @@ export function ProjectCard({
   links,
   className,
 }: Props) {
+  const [tilt, setTilt] = useState({ rx: 0, ry: 0 });
+
+  const handleMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const el = e.currentTarget;
+    const rect = el.getBoundingClientRect();
+    const px = (e.clientX - rect.left) / rect.width - 0.5;
+    const py = (e.clientY - rect.top) / rect.height - 0.5;
+    setTilt({ rx: -py * 6, ry: px * 6 });
+  };
+
   return (
     <div
+      onMouseMove={handleMove}
+      onMouseLeave={() => setTilt({ rx: 0, ry: 0 })}
+      style={{
+        transform: `perspective(900px) rotateX(${tilt.rx}deg) rotateY(${tilt.ry}deg)`,
+      }}
       className={cn(
-        "flex flex-col h-full border border-border rounded-xl overflow-hidden hover:ring-2 cursor-pointer hover:ring-primary/40 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 transition-all duration-300 ease-out",
+        "flex flex-col h-full border border-border rounded-xl overflow-hidden hover:ring-2 cursor-pointer hover:ring-primary/40 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 transition-transform duration-200 ease-out [transform-style:preserve-3d] motion-reduce:!transform-none",
         className
       )}
     >
