@@ -23,7 +23,7 @@ export const DATA = {
   summary:
     "Current 2nd year undergraduate student majoring in Computer Science. As part of my education, I am an USAA Ascent Scholar, PatientRAG Research Assistant, UTS Bold Careers Intern, and Dean's List recipient. :)",
   avatarUrl: "/photos/jonathan-headshot.png",
-  ogImage: "/photos/jonathan-headshot.png",
+  ogImage: "/og_image.png",
   sections: {
     about: { order: 1, enabled: true, heading: "About" },
     resume: { order: 1.5, enabled: true, heading: "Resume", url: "/resume-2.pdf" },
