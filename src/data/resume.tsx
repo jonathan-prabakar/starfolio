@@ -15,7 +15,7 @@ import { TailwindCSS } from "@/components/ui/svgs/tailwind";
 export const DATA = {
   name: "Jonathan Gladwin Prabakar - CS + Statistics student",
   initials: "JP",
-  url: "https://astrofolio.jonprabakar9.workers.dev",
+  url: "https://jonathanprabakar.vercel.app",
   location: "San Antonio, TX",
   locationLink: "https://www.google.com/maps/place/san_antonio+tx",
   description:

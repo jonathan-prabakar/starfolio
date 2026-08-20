@@ -3,7 +3,7 @@ export const CONFIG = {
   // Site Settings
   // ---------------------------------------------------------------------------
   site: {
-    url: "https://astrofolio.jonprabakar9.workers.dev",
+    url: "https://jonathanprabakar.vercel.app",
     locale: "en_US",
     twitterHandle: "@jonprabakar9",
   },
