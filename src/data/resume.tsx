@@ -26,7 +26,7 @@ export const DATA = {
   ogImage: "/photos/jonathan-headshot.png",
   sections: {
     about: { order: 1, enabled: true, heading: "About" },
-    resume: { order: 1.5, enabled: true, heading: "Resume", url: "/resume.pdf" },
+    resume: { order: 1.5, enabled: true, heading: "Resume", url: "/resume-2.pdf" },
     work: { order: 2, enabled: true, heading: "Experience", presentLabel: "Present" },
     education: { order: 3, enabled: true, heading: "Education" },
     skills: { order: 4, enabled: true, heading: "Skills" },
