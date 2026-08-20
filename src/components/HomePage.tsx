@@ -9,7 +9,8 @@ import HackathonsSection from "@/components/section/hackathons-section";
 import PhotosSection from "@/components/section/photos-section";
 import ProjectsSection from "@/components/section/projects-section";
 import WorkSection from "@/components/section/work-section";
-import { ArrowUpRight } from "lucide-react";
+import ResumeSection from "@/components/section/resume-section";
+import { ArrowUpRight, Mail } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
 
 const BLUR_FADE_DELAY = 0.04;
@@ -47,6 +48,15 @@ const sectionComponents: Record<string, React.ReactNode> = {
             </div>
           </BlurFade>
         </div>
+      </section>
+    </SectionReveal>
+  ),
+  resume: (
+    <SectionReveal>
+      <section id="resume">
+        <BlurFade delay={BLUR_FADE_DELAY * 4.5}>
+          <ResumeSection />
+        </BlurFade>
       </section>
     </SectionReveal>
   ),
@@ -172,7 +182,7 @@ export default function HomePage() {
             <div className="gap-2 flex flex-col order-2 md:order-1">
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
-                className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl"
+                className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl bg-gradient-to-b from-foreground via-foreground to-zinc-400 dark:to-zinc-500 bg-clip-text text-transparent drop-shadow-sm"
                 yOffset={8}
                 text={`Hi, I'm ${DATA.name.split(" ")[0]}`}
               />
@@ -181,6 +191,15 @@ export default function HomePage() {
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />
+              <BlurFade delay={BLUR_FADE_DELAY * 2} className="mt-2">
+                <a
+                  href="mailto:jonathanprabakart@gmail.com"
+                  className="group inline-flex w-fit items-center gap-2 rounded-full border border-border bg-background px-4 py-2 text-sm font-medium text-foreground shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary hover:text-primary-foreground hover:shadow-md hover:ring-2 hover:ring-primary/30"
+                >
+                  <Mail className="size-4" />
+                  Contact Me
+                </a>
+              </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2">
               <Avatar className="size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-muted">

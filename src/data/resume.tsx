@@ -26,6 +26,7 @@ export const DATA = {
   ogImage: "/photos/jonathan-headshot.png",
   sections: {
     about: { order: 1, enabled: true, heading: "About" },
+    resume: { order: 1.5, enabled: true, heading: "Resume", url: "/resume.pdf" },
     work: { order: 2, enabled: true, heading: "Experience", presentLabel: "Present" },
     education: { order: 3, enabled: true, heading: "Education" },
     skills: { order: 4, enabled: true, heading: "Skills" },
@@ -166,6 +167,48 @@ export const DATA = {
     
   ],
   projects: [
+    {
+      title: "The Real SaaS — Direct Solution",
+      href: "https://jonathanp567538.substack.com/p/the-real-saas",
+      dates: "August 2026",
+      active: true,
+      description:
+        "Featured Substack essay on why modern SaaS should produce outcomes, not workflows — arguing for customer-obsessed, service-based delivery over forcing tool adoption and data migration.",
+      technologies: ["Substack", "Writing", "SaaS", "Product Strategy"],
+      links: [
+        {
+          type: "Read",
+          href: "https://jonathanp567538.substack.com/p/the-real-saas",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image:
+        "https://substackcdn.com/image/fetch/$s_!-Ck-!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fjonathanp567538.substack.com%2Fapi%2Fv1%2Fpost_preview%2F210982090%2Ftwitter.jpg%3Fversion%3D4",
+      video: "",
+    },
+    {
+      title: "GrowFi",
+      href: "https://teamgrowfi.netlify.app",
+      dates: "September 2025",
+      active: true,
+      description:
+        "HackRice 2025 winner (sponsored by Goldman Sachs). A gamified financial literacy app for underbanked users with merit-based rewards and secure Face ID verification.",
+      technologies: ["React", "TypeScript", "Node.js", "Face ID", "Netlify"],
+      links: [
+        {
+          type: "Website",
+          href: "https://teamgrowfi.netlify.app",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Devpost",
+          href: "https://devpost.com/software/growfi",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
     {
       title: "Shepherd",
       href: "https://www.shepherdtech.app",
