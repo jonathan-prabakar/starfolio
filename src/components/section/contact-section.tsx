@@ -19,33 +19,28 @@ export default function ContactSection() {
           }}
         />
       </div>
-      <div className="relative flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
+      <div className="relative flex flex-col items-center gap-6 sm:flex-row sm:gap-8">
         <div className="relative shrink-0">
           <div className="absolute inset-0 rounded-full bg-primary/20 blur-xl" aria-hidden />
           <img
             src="/pfp2.jpg"
             alt={DATA.name}
-            className="relative size-24 sm:size-32 rounded-full border-2 border-primary/30 shadow-lg ring-4 ring-primary/10 object-cover"
+            className="relative size-24 rounded-full border-2 border-primary/30 object-cover shadow-lg ring-4 ring-primary/10 sm:size-32"
           />
         </div>
-        <div className="relative flex flex-col items-center sm:items-start gap-3 text-center sm:text-left">
+        <div className="flex min-w-0 flex-1 flex-col items-center gap-3 text-center sm:items-start sm:text-left">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
             {DATA.sections.contact.heading}
           </h2>
-          <p className="max-w-lg text-muted-foreground text-balance">
+          <p className="max-w-lg text-balance text-muted-foreground">
             {DATA.sections.contact.text}
           </p>
         </div>
-        <div className="relative flex items-center justify-center sm:ml-auto">
-          <a
-            href="mailto:jonathanprabakar@gmail.com"
-            className="group inline-flex w-fit items-center gap-2 rounded-full border border-border bg-background px-4 py-2 text-sm font-medium text-foreground shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary hover:text-primary-foreground hover:shadow-md hover:ring-2 hover:ring-primary/30"
-          >
-            <Mail className="size-4" />
-            Contact Me
-          </a>
-        </div>
+        <a
+          href="mailto:jonathanprabakar@gmail.com"
+          className="group inline-flex w-fit shrink-0 items-center gap-2 rounded-full border border-border bg-background px-4 py-2 text-sm font-medium text-foreground shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary hover:text-primary-foreground hover:shadow-md hover:ring-2 hover:ring-primary/30"
+        >
+          <Mail className="size-4" />
+          Contact Me
+        </a>
       </div>
-    </div>
-  );
-}
