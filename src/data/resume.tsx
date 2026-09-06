@@ -124,7 +124,7 @@ export const DATA = {
       title: "Apprenticeship",
       logoUrl: "/photos/codepath_logo.jpeg",
       start: "Jun 2026",
-      end: undefined,
+      end: "Aug 2026",
       description:
         "Up-skilling in a 10-week applied AI engineering program focused on supervised, project-based development, Python, RAG, debugging, testing, and Git version control. Building software and AI projects while applying responsible AI and modern development practices.",
     },
