@@ -117,6 +117,18 @@ export const DATA = {
   ],
   work: [
     {
+      company: "SBDCNet · National Information Clearinghouse",
+      href: "https://www.sbdcnet.org/",
+      badges: [],
+      location: "San Antonio, TX",
+      title: "IT Research Assistant",
+      logoUrl: "/photos/sbdcnet.png",
+      start: "Sep 2026",
+      end: undefined,
+      description:
+        "Conduct industry, competitor, market, demographic, GIS, and site-selection analysis to evaluate market feasibility, customer areas, and expansion opportunities for small-business clients. Analyze financial and market datasets across multiple industries and translate findings into decision-ready reports supporting business strategy and capital-planning decisions.",
+    },
+    {
       company: "CodePath",
       href: "https://www.codepath.org",
       badges: ["Founder"],
@@ -275,7 +287,7 @@ export const DATA = {
       dates: "October 31, 2026",
       location: "UTSA · San Antonio, TX",
       description: "Built CruzeJourney, a fuel-aware dashboard for truck drivers that combines simulated vehicle diagnostics with real road routes and fuel-stop planning.",
-      image: "",
+      image: "https://avatar.vercel.sh/hacktoberfest-hack-day-2026?size=40",
       win: "2nd Place — Best Overall",
       links: [
         {

@@ -30,21 +30,42 @@ function LogoImage({ src, alt }: { src: string; alt: string }) {
 }
 
 export default function WorkSection() {
+  const [openedCompany, setOpenedCompany] = useState("");
+  const [hoveredCompany, setHoveredCompany] = useState("");
+
   return (
-    <Accordion type="single" collapsible className="w-full grid gap-6">
+    <Accordion type="single" collapsible value={hoveredCompany || openedCompany} className="w-full grid gap-6">
       {DATA.work.map((work) => (
         <AccordionItem
           key={work.company}
           value={work.company}
+          onPointerEnter={(event) => {
+            if (event.pointerType === "mouse") {
+              setHoveredCompany(work.company);
+            }
+          }}
+          onPointerLeave={(event) => {
+            if (event.pointerType === "mouse") {
+              setHoveredCompany("");
+            }
+          }}
           className="w-full border-b-0 grid gap-2 rounded-lg transition-all duration-300 ease-out hover:bg-muted/40 hover:ring-1 hover:ring-primary/30 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-0.5 p-2 -m-2"
         >
-          <AccordionTrigger className="hover:no-underline p-0 cursor-pointer transition-colors rounded-none group [&>svg]:hidden">
+          <AccordionTrigger
+            className="hover:no-underline p-0 cursor-pointer transition-colors rounded-none group [&>svg]:hidden"
+            onClick={(event) => {
+              // Toggle the explicitly opened row independently of the hover preview.
+              event.preventDefault();
+              setOpenedCompany(openedCompany === work.company ? "" : work.company);
+              setHoveredCompany("");
+            }}
+          >
             <div className="flex flex-col sm:flex-row sm:items-center gap-x-3 gap-y-1 justify-between w-full text-left">
               <div className="flex items-center gap-x-3 flex-1 min-w-0">
                 <LogoImage src={work.logoUrl} alt={work.company} />
                 <div className="flex-1 min-w-0 gap-0.5 flex flex-col">
                   <div className="font-semibold leading-none flex items-center gap-2">
-                    <span className="truncate">{work.company}</span>
+                    <span className="min-w-0 wrap-break-word">{work.company}</span>
                     <span className="relative inline-flex items-center w-3.5 h-3.5 shrink-0">
                       <ChevronRight
                         className={cn(
