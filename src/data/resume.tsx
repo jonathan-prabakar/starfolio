@@ -295,6 +295,7 @@ export const DATA = {
         },
       ],
     },
+    {
       title: "CodeQuantum 2026",
       dates: "March 2026",
       location: "San Antonio, TX",
