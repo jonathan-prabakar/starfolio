@@ -270,6 +270,31 @@ export const DATA = {
   ],
   hackathons: [
     {
+          {
+      title: "Hacktoberfest Hack Day 2026",
+      dates: "October 31, 2026",
+      location: "UTSA · San Antonio, TX",
+      description: "Built CruzeJourney, a fuel-aware dashboard for truck drivers that combines simulated vehicle diagnostics with real road routes and fuel-stop planning.",
+      image: "",
+      win: "2nd Place — Best Overall",
+      links: [
+        {
+          title: "Source",
+          icon: <Icons.github className="h-4 w-4" />,
+          href: "https://github.com/jonathan-prabakar/cruzejourney",
+        },
+        {
+          title: "Live Demo",
+          icon: <Icons.globe className="h-4 w-4" />,
+          href: "https://cruzejourney.vercel.app/",
+        },
+        {
+          title: "Video Demo",
+          icon: <Icons.globe className="h-4 w-4" />,
+          href: "https://youtu.be/ojO7sdBFloQ",
+        },
+      ],
+    },
       title: "CodeQuantum 2026",
       dates: "March 2026",
       location: "San Antonio, TX",
