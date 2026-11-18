@@ -270,7 +270,7 @@ export const DATA = {
   ],
   hackathons: [
     {
-          {
+          
       title: "Hacktoberfest Hack Day 2026",
       dates: "October 31, 2026",
       location: "UTSA · San Antonio, TX",
