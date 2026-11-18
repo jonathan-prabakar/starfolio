@@ -21,7 +21,7 @@ export const DATA = {
   description:
     "Welcome to my Personal Portfolio! I'm an innovative and persistent CS student, eager to learn and solve problems in a project-based environment.",
   summary:
-    "Current 2nd year undergraduate student majoring in Computer Science. As part of my education, I am an USAA Ascent Scholar, PatientRAG Research Assistant, UTS Bold Careers Intern, and Dean's List recipient. :)",
+    "Current 2nd year undergraduate student majoring in Computer Science. As part of my education, I am an IT Research Assistant, prev. USAA Ascent Scholar, PatientRAG Research Assistant, prev. UTS Bold Careers Intern, and Dean's List recipient. :)",
   avatarUrl: "/photos/jonathan-headshot.png",
   ogImage: "/og_image.png",
   sections: {
